@@ -18,15 +18,15 @@ public class FallingPlatform : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         spriteR = GetComponent<SpriteRenderer>();
-        spriteR.sprite = sprites[0]; 
+        spriteR.sprite = sprites[0];
         layers = new int[] { 6, 8, 9 };
 
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //ѕроверка на столкновение с персонажем
-        if (collision.gameObject.tag == "hero" && Hero.Instance.rb.velocity.y == 0)
+        //ѕроверка на столкновение с персонажем 
+        if (collision.gameObject.CompareTag("hero") && Hero.Instance.rb.velocity.y == 0)
         {
             Invoke("FallPlatform", timeToFall);
         }
@@ -45,7 +45,7 @@ public class FallingPlatform : MonoBehaviour
     private void FallPlatform ()
     {
         rb.isKinematic = false;
-        spriteR.sprite = sprites[1]; 
+        spriteR.sprite = sprites[1];
         Invoke("ChangeSprite", 0.5f);
     }
 
