@@ -43,6 +43,7 @@ public class StaticEnemyWithHealth : MonoBehaviour
     //ялепрэ
     private void Die()
     {
+        //AudioManager.PlaySound("enemyDeath");
         Destroy(this.gameObject);
     }
 }

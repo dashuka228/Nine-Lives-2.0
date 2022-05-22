@@ -26,7 +26,7 @@ public class FallingPlatform : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //ѕроверка на столкновение с персонажем 
-        if (collision.gameObject.CompareTag("hero") && Hero.Instance.rb.velocity.y == 0)
+        if (collision.gameObject.CompareTag("hero"))
         {
             Invoke("FallPlatform", timeToFall);
         }
