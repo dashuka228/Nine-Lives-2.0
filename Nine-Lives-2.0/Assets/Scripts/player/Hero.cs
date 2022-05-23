@@ -79,9 +79,9 @@ public class Hero : MonoBehaviour
     {
         if (isGrounded && Input.GetButton("Jump") && (rb.velocity.y == 0)) //охгдеж онярюбэре щрн брнпне сякнбхе б пюлйс мюуси. еаюмши опшфнй...
         {
+            animator.SetBool("IsJumping", true);
             rb.velocity = new Vector2(rb.velocity.x, 0);
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-            animator.SetBool("IsJumping", true);
         }
     }
 
@@ -89,6 +89,7 @@ public class Hero : MonoBehaviour
     private void CheckGround()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, groundMask);
+        animator.SetBool("IsJumping", false);
     }
     
     //яосяй я окюртнплш
