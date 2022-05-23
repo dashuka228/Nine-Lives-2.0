@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream:Nine-Lives-2.0/Assets/UI elements/close.png.meta
 guid: e874276657e2a444d813fd3d03c885c8
+=======
+guid: 14e29c7a9d03b9c4d9981c6c2bd80258
+>>>>>>> Stashed changes:Nine-Lives-2.0/Assets/UI elements 1/game over/game_over.png.meta
+=======
+guid: 9ce101805a879c34996624c7a5f678ca
+>>>>>>> Stashed changes
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
