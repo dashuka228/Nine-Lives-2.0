@@ -20,13 +20,13 @@ public class FallingPlatform : MonoBehaviour
         spriteR = GetComponent<SpriteRenderer>();
         spriteR.sprite = sprites[0];
         layers = new int[] { 6, 8, 9 };
-
     }
+
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //ѕроверка на столкновение с персонажем 
-        if (collision.gameObject.CompareTag("hero") && Hero.Instance.rb.velocity.y == 0)
+        if (collision.gameObject.CompareTag("hero"))
         {
             Invoke("FallPlatform", timeToFall);
         }

@@ -44,7 +44,6 @@ public class Items : MonoBehaviour
 
             else
                 currentTarget = 0;
-            //transform.localScale = new Vector2(-transform.localScale.x, transform.localScale.y);
         }
     }
 }

@@ -62,6 +62,13 @@ public class PauseMenu : MonoBehaviour
         tecMenu = "Help";
     }
 
+    public void CloseHelp ()
+    {
+        help.SetActive(false);
+        pauseMenuUI.SetActive(true);
+        tecMenu = "PauseMenu";
+    }
+
     public void ExitGame ()
     {
         Debug.Log("оньек мюуси");
