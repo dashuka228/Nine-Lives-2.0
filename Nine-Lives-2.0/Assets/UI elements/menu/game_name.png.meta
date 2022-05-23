@@ -1,5 +1,17 @@
 fileFormatVersion: 2
-guid: 1dcc0d09470a9244895bafd7599b5595
+<<<<<<< HEAD:Nine-Lives-2.0/Assets/UI elements/close.png.meta
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream:Nine-Lives-2.0/Assets/UI elements/close.png.meta
+guid: e874276657e2a444d813fd3d03c885c8
+=======
+guid: 14e29c7a9d03b9c4d9981c6c2bd80258
+>>>>>>> Stashed changes:Nine-Lives-2.0/Assets/UI elements 1/game over/game_over.png.meta
+=======
+guid: 9ce101805a879c34996624c7a5f678ca
+>>>>>>> Stashed changes
+=======
+guid: 39d814c1ccc740d43bba274e93b259d6
+>>>>>>> parent of b644f172 (suhfsnjkf):Nine-Lives-2.0/Assets/UI elements/menu/game_name.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

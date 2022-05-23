@@ -30,6 +30,7 @@ Transform:
 <<<<<<< HEAD:Nine-Lives-2.0/Assets/Prefabs/platforms/falling platform.prefab
   m_GameObject: {fileID: 2681390202588619244}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD:Nine-Lives-2.0/Assets/Prefabs/platforms/falling platform .prefab
   m_LocalPosition: {x: 37.24, y: -1.54, z: 5}
 <<<<<<< Updated upstream:Nine-Lives-2.0/Assets/Prefabs/platforms/falling platform.prefab
 =======
@@ -39,6 +40,9 @@ Transform:
   m_LocalPosition: {x: 32, y: 12.7, z: 0}
 >>>>>>> e88bf3d141437a56a26d007f0a12e99a8a570e41:Nine-Lives-2.0/Assets/Prefabs/platforms/falling platform .prefab
 >>>>>>> Stashed changes:Nine-Lives-2.0/Assets/Prefabs/platforms/falling platform .prefab
+=======
+  m_LocalPosition: {x: 37.24, y: -1.54, z: 0}
+>>>>>>> parent of b644f172 (suhfsnjkf):Nine-Lives-2.0/Assets/Prefabs/platforms/falling platform.prefab
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

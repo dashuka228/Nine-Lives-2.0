@@ -53,6 +53,7 @@ public class PlayerInteraction : MonoBehaviour
     public void AddItem(int itemCount)
     {
         itemsInInventory += itemCount;
+        Debug.Log("УРА, в инвентаре:" + itemsInInventory);
     }
 
     //СМЕРТЬ(((

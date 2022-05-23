@@ -242,6 +242,7 @@ C# parse time         : 320ms
 candidates check time : 35ms
 console write time    : 1ms
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
 <<<<<<< HEAD
@@ -319,3 +320,5 @@ candidates check time : 54ms
 >>>>>>> Stashed changes
 console write time    : 0ms
 
+=======
+>>>>>>> parent of b644f172 (suhfsnjkf)
