@@ -24,7 +24,17 @@ public class end_night : MonoBehaviour
 
         if(collisionGameObject.name == "Player")
         {
-            SceneManager.LoadScene(nextScene.ToString());
+            Debug.Log("Player is here");
+            if (PlayerInteraction.Instance.itemsInInventory >= 10)
+            {
+                Debug.Log("GG");
+                SceneManager.LoadScene("Fin");
+            } else
+            {
+                Debug.Log("оньек мюуси");
+                SceneManager.LoadScene("GameOver");
+            }
+
         }
     }
 }

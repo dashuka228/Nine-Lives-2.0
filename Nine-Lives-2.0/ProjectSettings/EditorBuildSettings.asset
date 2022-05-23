@@ -5,7 +5,22 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 4a5da302bfa20b64795ce23e253de423
+  - enabled: 1
+    path: Assets/Scenes/night.unity
+    guid: 3bd9be180968a0b49aa11fe532ed79d5
+  - enabled: 0
+    path: Assets/Scenes/morning.unity
+    guid: 5a85ffaeb55df73418ee17e52aee9c78
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 31ae78c85eb3dd6458a3ccc354f2a756
+  - enabled: 1
+    path: Assets/Scenes/Fin.unity
+    guid: 2d91a768798d9d440a0804bfa95b60c7
   m_configObjects: {}

@@ -48,7 +48,7 @@ public class PauseMenu : MonoBehaviour
         GameIsPaused = false;
     }
 
-    private void Pause ()
+    public void Pause ()
     {
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
@@ -64,9 +64,9 @@ public class PauseMenu : MonoBehaviour
 
     public void ExitGame ()
     {
-        Debug.Log("оньек мюуси");
+        //Debug.Log("оньек мюуси");
         Time.timeScale = 1f;
-        //SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("Menu");
         //Application.Quit();
     }
 }

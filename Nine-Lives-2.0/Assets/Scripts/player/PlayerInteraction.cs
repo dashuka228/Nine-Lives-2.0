@@ -59,7 +59,7 @@ public class PlayerInteraction : MonoBehaviour
     //ялепрэ(((
     private void Die()
     {
-        SceneManager.LoadScene(scene);
+        SceneManager.LoadScene("GameOver");
     }
 
 
