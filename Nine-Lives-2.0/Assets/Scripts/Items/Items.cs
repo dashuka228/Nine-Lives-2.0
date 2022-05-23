@@ -30,6 +30,7 @@ public class Items : MonoBehaviour
         if (collision.gameObject.tag == "hero")
         {
             PlayerInteraction.Instance.AddItem(1);
+            //AudioManager.PlaySound("itemPick");
             Destroy(this.gameObject);
         }
     }
