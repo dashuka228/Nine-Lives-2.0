@@ -31,6 +31,8 @@ public class Hero : MonoBehaviour
     //—Œ«ƒ¿Õ»≈ ——€À »   — –»œ“”
     public static Hero Instance { get; set; }
 
+    //¿Õ»Ã¿“Œ–
+    float horizontalMove;
 
     private void FixedUpdate()
     {
@@ -54,10 +56,28 @@ public class Hero : MonoBehaviour
 
         DownFromThePlatform();
 
-        float horizontalMove = Math.Abs(Input.GetAxisRaw("Horizontal") * speed);
-        animator.SetFloat("Speed", horizontalMove);
+        animator = GetComponent<Animator>();
+
+        //if (isGrounded || rb.velocity.magnitude <= 0)
+        //    State = States.idle;
+
+        //float horizontalMove = Math.Abs(Input.GetAxisRaw("Horizontal") * speed);
+        //animator.SetFloat("Speed", horizontalMove);
 
 
+    }
+
+    public enum States
+    {
+        idle,
+        run,
+        jump
+    }
+
+    private States State
+    {
+        get { return (States)animator.GetInteger("State"); }
+        set { animator.SetInteger("State", (int)value); }
     }
 
 
@@ -71,7 +91,15 @@ public class Hero : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, transform.position + dir, speed * Time.deltaTime); //Á‡‰‡ÌËÂ ‰‚ËÊÂÌËˇ
 
             sprite.flipX = dir.x < 0.0f; //Ó·‡˘‡ÂÏÒˇ Í Á‡ÏÂ˜‡ÚÂÎ¸ÌÓÏÛ Ò‚ÓÈÒÚ‚Û ÒÔ‡ÈÚ‡ flipX, ÍÓÚÓÓÂ ÓÚÁÂÍ‡ÎË‚‡ÂÚ ÔÂÒÓÌ‡Ê‡, ÂÒÎË ÓÌ Ë‰∏Ú ‚ ‰Û„Û˛ ÒÚÓÓÌÛ
+
+            //animator.SetFloat("Speed", horizontalMove);
+
+            if (isGrounded)
+                State = States.run;
         }
+
+        else if (isGrounded && (rb.velocity.y == 0))
+            State = States.idle;
     }
 
     //œ–€∆Œ 
@@ -79,9 +107,11 @@ public class Hero : MonoBehaviour
     {
         if (isGrounded && Input.GetButton("Jump") && (rb.velocity.y == 0)) //œ»«ƒ≈÷ œŒ—“¿¬‹“≈ ›“Œ ¬“Œ–Œ≈ ”—ÀŒ¬»≈ ¬ –¿Ã ” Õ¿’”…. ≈¡¿Õ€… œ–€∆Œ ...
         {
-            animator.SetBool("IsJumping", true);
             rb.velocity = new Vector2(rb.velocity.x, 0);
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            //animator.SetBool("InJumping", true);
+
+            //animator.SetInteger("State", 2);
         }
     }
 
@@ -89,7 +119,10 @@ public class Hero : MonoBehaviour
     private void CheckGround()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, groundMask);
-        animator.SetBool("IsJumping", false);
+        //animator.SetBool("InJumping", false);
+
+        if (!isGrounded)
+            State = States.jump;
     }
     
     //—œ”—  — œÀ¿“‘Œ–Ã€

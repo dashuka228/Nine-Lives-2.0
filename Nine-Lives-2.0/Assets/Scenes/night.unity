@@ -2912,7 +2912,7 @@ RectTransform:
   - {fileID: 945140845}
   - {fileID: 1323451800}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -7990,7 +7990,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 9
   damage: 1
-  invincibleTime: 5
+  invincibleTime: 1
   itemsInInventory: 0
 --- !u!114 &877148418
 MonoBehaviour:
@@ -8006,7 +8006,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 0}
   animator: {fileID: 877148415}
-  rb: {fileID: 0}
+  rb: {fileID: 877148420}
   speed: 6
   lives: 0
   jumpForce: 40
@@ -8075,7 +8075,7 @@ Transform:
   m_Children:
   - {fileID: 760613950}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &877148422
 MonoBehaviour:
@@ -10096,7 +10096,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1156349706
 BoxCollider2D:
