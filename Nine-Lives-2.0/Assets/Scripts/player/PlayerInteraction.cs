@@ -18,6 +18,9 @@ public class PlayerInteraction : MonoBehaviour
     //ITEMS
     public int itemsInInventory = 0; //количество предметов в инвентаре
 
+    //КАМЕРА
+    [SerializeField] private Camera camera;
+
     //СОЗДАНИЕ ССЫЛКИ К СКРИПТУ
     public static PlayerInteraction Instance { get; set; }
 
@@ -34,6 +37,7 @@ public class PlayerInteraction : MonoBehaviour
     {
         if (!invincible)
         {
+            camera.GetComponent<CameraShaker>().ShakeCamera();
             health -= damage;
             invincible = true;
             Invoke("resetInvulnerability", invincibleTime);
