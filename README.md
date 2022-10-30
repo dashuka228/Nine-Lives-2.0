@@ -1,2 +1,2 @@
 # Nine-Lives-2.0
-СОНЕ ВХОД ЗАПРЕЩЕН
+The game about poor cat who tries to find the way to home
